@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnityEngine;
 
 namespace Assets.Scripts.Abstraction
 {
-    public interface ICharacter
+    public abstract class AbsCharacter : AbsCombatant
     {
-        public void Attack(GameObject gameObject);
+        private void Start()
+        {
+            tag = nameof(AbsCharacter);
+        }
     }
 }
